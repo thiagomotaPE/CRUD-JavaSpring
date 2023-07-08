@@ -38,6 +38,7 @@ public class ProductController {
             Product product = optionalProduct.get();
             product.setName(data.name());
             product.setPrice_in_cents(data.price_in_cents());
+            product.setActive(data.active());
             return ResponseEntity.ok(product);
         }else {
             return ResponseEntity.notFound().build();
